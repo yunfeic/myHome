@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>吾家</title>
+	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/activity.css">
+</head>
+<body>
+	<header id="header" class="clearfix">
+		<a class="fl" href="index.html">返回</a>
+		<a class="fr js-wtask" href="javascript:void(0)">发起</a>
+		<h2>活动</h2>
+	</header>
+
+	<section id="section">
+		<ul>
+			<li>
+				<div>
+					<span class="fr">2015-10-25</span>
+					<span class="fr mr130">父亲</span>
+					<h2>任务1</h2>
+				</div>
+			</li>
+			<li>
+				<div>
+					<span class="fr">2015-10-26</span>
+					<span class="fr mr130">母亲</span>
+					<h2>任务2</h2>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<footer id="footer">
+		<div>
+			<ul>
+				<li>
+					<a href="javascript:void(0)">投票</a>
+				</li>
+				<li>
+					<a class="selected" href="javascript:void(0)">任务分派</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">聚会</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+
+	<div class="layer"></div>
+	<div class="box">
+		<div>查看任务内容...</div>
+	</div>
+
+	<script src="js/jquery-1.9.1.js"></script>
+	<script>
+		$("#section").find('li').click(function(event) {
+			/* Act on the event */
+			$(".layer, .box").fadeIn();
+		});
+
+		$(".layer").click(function(event) {
+			/* Act on the event */
+			$(".layer, .box").fadeOut();
+		});
+
+		$(".js-wtask").click(function(event) {
+			/* Act on the event */
+			location.href = "task.html";
+		});
+	</script>
+</body>
+</html>

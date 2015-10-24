@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>吾家</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/future.css">
+</head>
+<body>
+	<header id="header" class="clearfix">
+		<a class="fl" href="index.html">返回</a>
+		<a class="fr js-write" href="javascript:void(0)">写信</a>
+		<h2>时光机</h2>
+	</header>
+
+	<section id="section">
+		<ul>
+			<li>
+				<div>
+					<span class="fr">2035-01-01</span>
+					<h2>信件标题1</h2>
+				</div>
+			</li>
+			<li>
+				<div>
+					<span class="fr">2045-01-01</span>
+					<h2>信件标题2</h2>
+				</div>
+			</li>
+		</ul>
+	</section>	
+
+	<div class="layer"></div>
+	<div class="box">
+		<div>写给儿女未来的一封信...</div>
+	</div>
+
+	<script src="js/jquery-1.9.1.js"></script>
+	<script>
+		$("#section").find('li').click(function(event) {
+			/* Act on the event */
+			location.href = "letter.html";
+		});
+
+		$(".layer").click(function(event) {
+			/* Act on the event */
+			$(".layer, .box").fadeOut();
+		});
+
+		$(".js-write").click(function(event) {
+			/* Act on the event */
+			$(".layer, .box").fadeIn();
+		});
+	</script>
+</body>
+</html>

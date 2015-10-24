@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>吾家</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/whisper.css">
+</head>
+<body>
+	<header id="header" class="clearfix">
+		<a class="fl" href="index.html">返回</a>
+		<a class="fr js-filter" href="javascript:void(0)">筛选</a>
+		<h2>亲聊</h2>
+		<div class="filter">
+			<p>
+				<a class="select" href="javascript:void(0)">最新</a>
+				<a href="javascript:void(0)">最赞</a>
+			</p>
+			<p>
+				<a class="select" href="javascript:void(0)">公开</a>
+				<a href="javascript:void(0)">私密</a>
+			</p>
+			<p>
+				<a class="select" href="javascript:void(0)">父母</a>
+				<a href="javascript:void(0)">儿女</a>
+			</p>
+		</div>
+	</header>
+
+	<section id="section">
+		<ul>
+			<li>
+				<div class="clearfix">
+					<a class="fl" href="javascript:void(0)">
+						<img src="images/me.jpg" height="50" width="50" alt="">
+					</a>
+					<div class="person">
+						<h2>小张</h2>
+						<p>4分钟前</p>
+					</div>
+				</div>
+				<div class="mess">
+					<p>发布的消息2</p>
+					<div></div>
+				</div>
+				<div class="edit">
+					<ul>
+						<li>
+							<a href="javascript:void(0)">分享</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">评论</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">点赞</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div class="clearfix">
+					<a class="fl" href="javascript:void(0)">
+						<img src="images/me.jpg" height="50" width="50" alt="">
+					</a>
+					<div class="person">
+						<h2>小张</h2>
+						<p>1小时前</p>
+					</div>
+				</div>
+				<div class="mess">
+					<p>发布的消息1</p>
+					<div></div>
+				</div>
+				<div class="edit">
+					<ul>
+						<li>
+							<a href="javascript:void(0)">分享</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">评论</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">点赞</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<footer id="footer" class="clearfix">
+		<a class="fl" href="javascript:void(0)">首页</a>
+		<a class="fr" href="javascript:void(0)">消息</a>
+		<a class="js-write" href="javascript:void(0)"><em class="write">+</em></a>
+	</footer>
+
+	<div class="layer"></div>
+	<div class="box">
+		<div class="head">
+			<a class="cancel" href="javascript:void(0)">X</a>
+			<h2>对家人说些什么...</h2>
+		</div>
+		<div class="detail">
+			<textarea></textarea>
+		</div>
+		<div class="fun">
+			<img src="images/fun.png" height="33" width="171" alt="">
+			<div class="publish fr">
+				<a href="javascript:void(0)">
+					<img class="js-select" src="images/select.png" height="27" width="54" alt="">
+				</a>
+				<a class="published" href="javascript:void(0)">发布</a>
+			</div>
+			<div class="menu none">
+				<ul>
+					<li>
+						<a href="javascript:void(0)">
+							公开
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							父亲(昵称)
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							母亲(昵称)
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.9.1.js"></script>
+	<script>
+		var Show = false;
+		var $filter = $(".filter");
+		$(".js-filter").click(function() {
+			if(!Show) {
+				$filter.fadeIn();
+			} else {
+				$filter.fadeOut();
+			}
+			Show = !Show;
+		});
+		$(".filter").find('a').click(function(event) {
+			/* Act on the event */
+			$(".js-filter").trigger('click');
+		});
+
+		var $menu = $(".menu");
+		$(".js-select").click(function(event) {
+			/* Act on the event */
+			$menu.toggleClass('none');
+		});
+		$menu.find('li').click(function(event) {
+			/* Act on the event */
+			$menu.addClass('none');
+		});
+
+		$(".cancel").click(function(event) {
+			/* Act on the event */
+			$(".layer, .box").fadeOut();
+		});
+
+		$(".js-write").click(function(event) {
+			/* Act on the event */
+			$(".layer, .box").fadeIn();
+		});
+
+		var $area = $(".detail").children('textarea'),
+			$ul = $("#section").children('ul');
+		var $text = $('<li><div class="clearfix"><a class="fl" href="javascript:void(0)"><img src="images/me.jpg" height="50" width="50" alt=""></a><div class="person"><h2>小张</h2><p>4分钟前</p></div></div><div class="mess"><p>发布的消息</p><div></div></div><div class="edit"><ul><li><a href="javascript:void(0)">分享</a></li><li><a href="javascript:void(0)">评论</a></li><li><a href="javascript:void(0)">点赞</a></li></ul></div></li>'),
+			mess;
+		$(".published").click(function(event) {
+			/* Act on the event */
+			$(".cancel").trigger('click');
+			mess = $area.val();
+			if(mess) {
+				$text.children('.mess').children('p').text(mess);
+				$text.find('.person').children('p').text('刚刚');	
+				$ul.prepend($text);
+				$area.val('');
+			}
+		});
+	</script>
+</body>
+</html>

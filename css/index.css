@@ -1,0 +1,78 @@
+.back{
+	position: absolute;
+	right: 15px;
+	top: 6px;
+	width: 50px;
+    height: 32px;
+    line-height: 32px;
+	color: #707070;
+    border-radius: 5px;
+    background-color: #ebebeb;
+    text-align: center;
+}
+
+.title{
+	text-align: center;
+	font-size: 18px;
+}
+
+#section{
+	text-align: center;
+	width: 100%;
+	background: #fff;
+	margin-top: 10px;
+	overflow: auto;
+}
+
+.module{
+	max-width: 620px;
+	margin: 0 auto;
+}
+.module li{
+	background: #fff;
+	width: 50%;
+	float: left;
+	height: 140px;
+}
+.module li a{
+	color: #5d5d5d;
+    font-size: 16px;
+    display: block;
+    border-left: #e8eaea solid 1px;
+    height: 139px;
+    /*line-height: 139px;*/
+    border-bottom: #e8eaea solid 1px;
+}
+.module li a.leftboder{
+	border-left: none;
+}
+/*.rightborder{
+	border-right: #e8eaea solid 1px;
+}*/
+.module em{
+	width: 34px;
+	display: block;
+	margin: 0 auto;
+	height: 88px;
+	background: url(../images/icon.png) no-repeat -999px -999px;
+	background-size: 154px;
+}
+.whisper em{
+	background-position: -108px -68px;
+}
+.member em{
+	background-position: -111px 42px;
+}
+.activity em{
+	background-position: 0 40px;
+}
+.pay em{
+	background-position: 0px -174px;
+}
+.add em{
+	background-position: 0px -70px;
+}
+.future em{
+	background: url(../images/future.png) no-repeat center 40px;
+	background-size: 42px;
+}

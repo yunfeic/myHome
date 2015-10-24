@@ -1,0 +1,45 @@
+#header a{
+	display: block;
+}
+
+#header h2{
+	text-align: center;
+}
+
+#section>ul{
+	margin-top: 10px;
+}
+
+#section>ul>li{
+	padding: 10px;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+#section>ul>li+li{
+	margin-top: 10px;
+}
+
+.layer{
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0.3;
+	z-index: 999;
+	background: rgb(0, 0, 0);
+}
+.box{
+	display: none;
+	width: 500px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/*border-top: 2px solid #fa7f40;*/
+	background-color: #fff;
+	z-index: 9999;
+}

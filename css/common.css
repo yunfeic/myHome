@@ -1,0 +1,46 @@
+html {
+    background-color: #f0f0f0;
+    height: 100%;
+}
+
+body{
+	font: normal 14px/22px Arial,"Microsoft YaHei";
+    color: #323232;
+    background-color: #e3e2e2;
+    max-width: 640px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+#header{
+    position: relative;
+    top: 0;
+    padding: 0 10px;
+	height: 44px;
+	line-height: 44px;
+	background-color: #f7f7f7;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.clearfix:after { 
+    visibility: hidden; 
+    display: block; 
+    font-size: 0; 
+    content: " "; 
+    clear: both; 
+    height: 0; 
+}
+
+.none{
+    display: none;
+}
+
+.mr130{
+    margin-right: 130px;
+}
