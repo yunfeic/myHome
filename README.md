@@ -15,9 +15,11 @@
 
 ![image](http://ww1.sinaimg.cn/large/74311666jw1exczghrz74j20iy0hrmy8.jpg)
 
-![image](http://ww1.sinaimg.cn/large/74311666jw1exczh5ig4kj20j00hrwf1.jpg)
+![image](http://ww1.sinaimg.cn/large/743功能模块图功能功能xx功能能功能ada11666jw1exczh5ig4kj20j00hrwf1.jpg)
 
 ![image](http://ww1.sinaimg.cn/large/74311666jw1exczhnq9hxj20k40hqmxq.jpg)
 
+## 产品模块图
+![image]./pics/p5.png)
 
 
