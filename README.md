@@ -11,13 +11,13 @@
 * [顾闻](https://github.com/gwpost)
 
 ##产品预览
-![image](http://ww4.sinaimg.cn/large/74311666jw1exczezuuq5j20j50hst97.jpg)
+![image](./pics/p1.jpg)
 
-![image](http://ww1.sinaimg.cn/large/74311666jw1exczghrz74j20iy0hrmy8.jpg)
+![image](./pics/p2.png)
 
-![image](http://ww1.sinaimg.cn/large/743功能模块图功能功能xx功能能功能ada11666jw1exczh5ig4kj20j00hrwf1.jpg)
+![image](./pics/p3.png)
 
-![image](http://ww1.sinaimg.cn/large/74311666jw1exczhnq9hxj20k40hqmxq.jpg)
+![image](./pics/p4.png)
 
 ## 产品模块图
 ![image](./pics/p5.png)
